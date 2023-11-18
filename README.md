@@ -47,12 +47,13 @@ Students can register for a session with a tutor.
 
 Students can search for tutors based on their subjects and availability.
 
-[gif goes here]
+![image](https://github.com/FelixNgFender/web103_finalproject/assets/98554622/c4b2b7e6-244a-4c57-86c0-aec42e235456)
 
 ### Profile Edit
 
 Users can add a profile picture and update their bio or subjects.
-[gif goes here]
+
+![asddsa](https://github.com/FelixNgFender/web103_finalproject/assets/98554622/27335468-c4c5-4b33-892a-fb0543859d29)
 
 ### Ratings
 

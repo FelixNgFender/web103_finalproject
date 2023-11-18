@@ -4,7 +4,7 @@ CodePath WEB103 Final Project
 
 Designed and developed by: Duc Nguyen & Thinh Nguyen
 
-🔗 Link to deployed app:
+🔗 Link to deployed app: https://studymeet.up.railway.app/
 
 ## About
 

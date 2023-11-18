@@ -213,14 +213,14 @@ const setup = async () => {
   }
   await createSubjectsTable();
   await createSchoolsTable();
-  await seedSubjectsTable();
-  await seedSchoolsTable();
+  // await seedSubjectsTable();
+  // await seedSchoolsTable();
   await createUsersTable();
   await createAvailabilitiesTable();
   await createSessionsTable();
   // if (process.env.NODE_ENV === "development") {
-  await seedUsersTable();
-  await seedAvailabilitiesTable();
+  // await seedUsersTable();
+  // await seedAvailabilitiesTable();
   // }
 };
 

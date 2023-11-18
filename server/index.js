@@ -17,6 +17,7 @@ import authRouter from "./src/routes/auth.js";
 import usersRouter from "./src/routes/users.js";
 import schoolsRouter from "./src/routes/schools.js";
 import subjectsRouter from "./src/routes/subjects.js";
+import availabilitiesRouter from "./src/routes/availabilities.js";
 import { ensureAuthenticated } from "./src/middlewares/ensureAuthenticated.js";
 
 seed();
@@ -40,9 +41,10 @@ app.get("/health", (req, res) => {
 
 app.use("/auth", authRouter);
 
-app.use("/api/users", ensureAuthenticated, usersRouter);
+app.use("/api/users", usersRouter);
 app.use("/api/schools", ensureAuthenticated, schoolsRouter);
 app.use("/api/subjects", ensureAuthenticated, subjectsRouter);
+app.use("/api/availabilities", availabilitiesRouter);
 
 app.use(favicon(path.resolve("public", "vite.svg")));
 app.use(express.static(path.join(__dirname, "public")));
@@ -52,7 +54,7 @@ app.get("*", (req, res) => {
 
 let server;
 
-if (process.env.NODE_ENV === "development") {
+// if (process.env.NODE_ENV === "development") {
   server = https.createServer(
     {
       key: fs.readFileSync(`${__dirname}/certs/key.pem`, "utf8"),
@@ -60,9 +62,9 @@ if (process.env.NODE_ENV === "development") {
     },
     app
   );
-} else if (process.env.NODE_ENV === "production") {
-  server = app;
-}
+// } else if (process.env.NODE_ENV === "production") {
+//   server = app;
+// }
 
 server.listen(process.env.PORT, (_) => {
   console.log(`Server listening on port https://localhost:${process.env.PORT}`);

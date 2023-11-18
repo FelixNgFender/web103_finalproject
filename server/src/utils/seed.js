@@ -94,6 +94,23 @@ const createAvailabilitiesTable = async () => {
   }
 };
 
+const createAppointmentTable = async () => {
+  const createTableQuery = `
+      CREATE TABLE IF NOT EXISTS appointments (
+        id SERIAL PRIMARY KEY,
+        tutor_id INT NOT NULL references users(id),
+        student_id INT NOT NULL references users(id),
+        time_block INT NOT NULL
+      );\
+  `;
+  try {
+    const res = await pool.query(createTableQuery);
+    console.log("🎉 appointments table created successfully");
+  } catch (err) {
+    console.error("⚠️ error creating appointments table", err);
+  }
+};
+
 const createSessionsTable = async () => {
   const createTableQuery = `
       CREATE TABLE IF NOT EXISTS sessions (
@@ -218,6 +235,7 @@ const setup = async () => {
   await createUsersTable();
   await createAvailabilitiesTable();
   await createSessionsTable();
+  await createAppointmentTable();
   // if (process.env.NODE_ENV === "development") {
   await seedUsersTable();
   await seedAvailabilitiesTable();

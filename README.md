@@ -47,7 +47,7 @@ Students can register for a session with a tutor.
 
 Students can search for tutors based on their subjects and availability.
 
-![image](https://github.com/FelixNgFender/web103_finalproject/assets/98554622/c4b2b7e6-244a-4c57-86c0-aec42e235456)
+![FinalProject](https://github.com/FelixNgFender/web103_finalproject/assets/98554622/dd3f5442-b0e6-4014-a055-f1843a831e9e)
 
 ### Profile Edit
 

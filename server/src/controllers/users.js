@@ -27,8 +27,20 @@ const getAll = async (req, res) => {
     res.status(409).json({ error: error.message });
   }
 }
+
+const getAllTutors = async (req, res) => {
+  try {
+    console.log('here')
+    const {rows} = await User.findAllByRole('tutor');
+    return res.status(200).json(rows);
+  } catch (error) {
+    res.status(409).json({error: error.message});
+  }
+}
+
 export default {
   getCurrentUser,
   updateCurrentUser,
-  getAll
+  getAll,
+  getAllTutors
 };

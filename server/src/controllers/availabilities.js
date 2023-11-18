@@ -1,9 +1,9 @@
 import Availability from "../models/availability.js";
   
-  const getTimeTutors = async (req, res) => {
+  const getTutorTime = async (req, res) => {
     try {
         console.log('from here',req.params.time)
-      const { rows } = await Availability.findTime(req.params.time);
+      const { rows } = await Availability.findTime(req.params.tutorId);
       console.log(rows)
       return res.status(200).json(rows);
     } catch (error) {
@@ -23,6 +23,6 @@ import Availability from "../models/availability.js";
   };
 
   export default {
-    getTimeTutors,
+    getTutorTime,
     addTimeTutor,
   };

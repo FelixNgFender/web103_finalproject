@@ -39,6 +39,11 @@ const remove = (id) => {
   return pool.query(query, [id]);
 };
 
+const findAllByRole = (role) => {
+  const query = "SELECT * FROM users WHERE role = $1";
+  return pool.query(query, [role])
+}
+
 export default {
   findAll,
   findOne,
@@ -46,4 +51,5 @@ export default {
   create,
   update,
   remove,
+  findAllByRole,
 };

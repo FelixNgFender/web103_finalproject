@@ -10,14 +10,14 @@ const findOne = (id) => {
     return pool.query(query, [id]);
 };
   
-const findTime = (time_block) => {
+const findTime = (tutorId) => {
     const query = `
-    SELECT u.username, u.profile_picture, u.id
+    SELECT a.time_block
     FROM availabilities a
     JOIN users u ON a.tutor_id = u.id
-    WHERE a.time_block = $1;
+    WHERE a.tutor_id = $1;
 `;
-    return pool.query(query, [time_block])
+    return pool.query(query, [tutorId])
 }
 const create = ({ tutor_id, time_block }) => {
     const query = `

@@ -18,6 +18,7 @@ import usersRouter from "./src/routes/users.js";
 import schoolsRouter from "./src/routes/schools.js";
 import subjectsRouter from "./src/routes/subjects.js";
 import availabilitiesRouter from "./src/routes/availabilities.js";
+import appointmentsRouter from "./src/routes/appointments.js";
 import { ensureAuthenticated } from "./src/middlewares/ensureAuthenticated.js";
 
 seed();
@@ -45,6 +46,7 @@ app.use("/api/users", usersRouter);
 app.use("/api/schools", ensureAuthenticated, schoolsRouter);
 app.use("/api/subjects", ensureAuthenticated, subjectsRouter);
 app.use("/api/availabilities", availabilitiesRouter);
+app.use("/api/appointments", appointmentsRouter);
 
 app.use(favicon(path.resolve("public", "vite.svg")));
 app.use(express.static(path.join(__dirname, "public")));

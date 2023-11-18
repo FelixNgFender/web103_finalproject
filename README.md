@@ -34,11 +34,14 @@ Tutors and students can create an account and add their information to the datab
 
 Users can login and logout of their account.
 
-[gif goes here]
+![FinalProject_LogIn_LogOut](https://github.com/FelixNgFender/web103_finalproject/assets/98554622/db0ff05a-4843-45c7-bb4e-1790af5d4d01)
 
 ### Session Registration
 
 Students can register for a session with a tutor.
+
+![asd](https://github.com/FelixNgFender/web103_finalproject/assets/98554622/735410a9-865f-4617-a4a8-ee8b54594bac)
+
 
 ### Tutor Search
 
